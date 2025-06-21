@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>رسالتك اليومية</title>
+  <style>
+    body {
+      background-color: #f9f8f7;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+      direction: rtl;
+    }
+    .message {
+      font-size: 1.8em;
+      margin-top: 20%;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ رسالتك اليومية ✨</h1>
+  <div class="message" id="dailyMessage"></div>
+
+  <script>
+    const messages = [
+      "لا تؤجل سعادة اليوم إلى الغد.",
+      "النية الطيبة لا تَضيع عند الله.",
+      "أحبك لا لشيءٍ، بل لأنك كل شيء.",
+      "الإيمان قوة لا يراها أحد، لكنها تغير كل شيء.",
+      "لو يعلم البعض مكانتهم عندنا، لبكوا خجلاً من تصرفاتهم.",
+      "الرضا بالله هو بداية الطمأنينة.",
+      "ليس كل ما يُقال يستحق الاستماع.",
+      "كُن نبيلاً، وإن لم تُقابل بالنُبل.",
+      "هناك جمال في البساطة، لا يدركه إلا الراسخون في الذوق.",
+      "القلوب النقية لا تخيب مهما اشتدت الحياة.",
+    ];
+
+    const today = new Date();
+    const dayIndex = today.getDate() % messages.length;
+    document.getElementById("dailyMessage").innerText = messages[dayIndex];
+  </script>
+</body>
+</html>
